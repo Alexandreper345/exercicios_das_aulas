@@ -1,4 +1,6 @@
-imc = float(input("qual é o seu peso:  "))
+massa = float(input("qual é a sua massa: "))
+altura = float(input("qual a sua altura: "))
+imc = massa / (altura * altura)
 
 if imc < 18.5 :
     print("abaixo do peso")
