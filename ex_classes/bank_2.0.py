@@ -1,19 +1,9 @@
-class Bank():
-    def __init__(self, saldos = [] ,conta = []):
-        self.conta = conta
-        self.saldo = saldos
-    
-    
-    def transferencia(self):
-        lista = []
-        trans = float(input("quanto você quer tranferir: "))
-        lista.append(trans)
-        if self.conta [0] == self.conta [1]:
-            self.saldo -= trans
-            print(f"você tranferiu a {trans} para a conta {self.conta} e seu saldo foi para {self.saldo}")
+class bank:
+    def __init__(self):
+ 	    self.conta_bancario = []
 
+#criador de contas
 
-ba = Bank( 1000, conta = ['ale','alan','abelha'] )
-
-print(ba.transferencia())
-
+    def novas_contas(self):
+        conta = int(input("quantas contas você quer criar: "))
+        for i in range(1, conta+1):

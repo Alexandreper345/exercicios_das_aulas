@@ -15,3 +15,11 @@ class Student():
 lista = ["p" , "h"]
 stand = Student('alexandre' , '18' , lista)
 print(stand.caculate_media())    
+
+
+
+#@property
+
+#@funçao.setter
+#@classmethod
+#@cls
