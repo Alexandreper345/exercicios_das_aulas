@@ -26,6 +26,6 @@ alun_write = open("alunos.txt", "w")
 alun_write.write("")
 
 alun_append = open("alunos.txt", "a")
-for word in inteiro:
-    alun_append.write(word+"\n")
+for TXT in inteiro:
+    alun_append.write(TXT+"\n")
 
