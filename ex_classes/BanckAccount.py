@@ -24,7 +24,11 @@ class BanckAccount():
 
     @privados_balance.setter
     def privados_balance(self , privados_balance):
-        self._privados_balance = privados_balance
+        if  privados_balance > 1000:
+            print("invalido")
+           
+        else:
+            self._privados_balance = privados_balance
 
 
 bank = BanckAccount('alexandre', 1000)
