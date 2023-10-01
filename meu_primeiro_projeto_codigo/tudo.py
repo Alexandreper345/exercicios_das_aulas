@@ -28,10 +28,7 @@ def remove(lista):
             ap.write(TXT+"\n")
 
     
-print('1. mostrar a lista',
-      '2. mostrar um nome da lista aleatorio',
-      '3. Adicionar um nome na lista',
-      '4. remover um nome da lista',
+print(
       '5.exit',sep= '\n')
 
 
