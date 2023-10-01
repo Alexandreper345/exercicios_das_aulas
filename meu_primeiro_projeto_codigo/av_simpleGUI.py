@@ -7,7 +7,7 @@ import PySimpleGUI as sg
 
 def add_aluno(lista,add_name: str,saida):
     lista.append(add_name)
-    abrir = open('alunos.txt' , 'a') 
+    abrir = open('meu_primeiro_projeto_codigo/alunos.txt' , 'a') 
     abrir.write('\n' + add_name)
     saida['PRINTAR'].update('\n'.join(lista))
     
@@ -15,7 +15,7 @@ def add_aluno(lista,add_name: str,saida):
 
 def remove(lista, delet_aluno,saida):
     lista.remove(delet_aluno)
-    with open("alunos.txt", "w") as file:
+    with open("meu_primeiro_projeto_codigo/alunos.txt", "w") as file:
         file.write(('\n'.join(lista)))
     saida['PRINTAR'].update('\n'.join(lista))
 
@@ -44,7 +44,7 @@ while True:
         break
     
     if eventos == '1':
-        with open('alunos.txt', 'r') as file:
+        with open('meu_primeiro_projeto_codigo/alunos.txt', 'r') as file:
                 txt = file.read()
                 formato  = list(map(str,txt.split('\n')))
         janela['PRINTAR'].update('\n'.join(formato))
