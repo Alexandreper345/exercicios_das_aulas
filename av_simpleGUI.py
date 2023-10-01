@@ -26,8 +26,8 @@ layout =[
 
     [sg.Text('Mostrar a lista de alunos?'), sg.Button('1')],
     [sg.Text('Escolher um aluno aleatorio?'), sg.Button( '2')],
-    [sg.Text('Adicionar um aluno na lista?'), sg.InputText(key='-3-'),sg.Button('3')],
-    [sg.Text('Remover o aluno da Lista?'), sg.InputText(key = '-4-'),sg.Button('4')],
+    [sg.Text('Adicionar um aluno na lista?'), sg.InputText(key='adicionar'),sg.Button('3')],
+    [sg.Text('Remover o aluno da Lista?'), sg.InputText(key = 'remover'),sg.Button('4')],
     [sg.Output(key = 'MOSTRAR', size=(60, 20))],
     [sg.Button('Sair')]
 ]
@@ -51,11 +51,11 @@ while True:
     if eventos == '2':
         janela['MOSTRAR'].update(choice(formato))
     if eventos == '3':
-        add_name = valores['-3-']
+        add_name = valores['adicionar']
         if add_name:
             add_aluno(formato, add_name , janela)
     if eventos == '4':
-        remove_name = valores['-4-']
+        remove_name = valores['remover']
         if remove_name in formato:
             remove(formato,remove_name,janela)
 
