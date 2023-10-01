@@ -25,10 +25,10 @@ altura = 20
 
 layout =[
 
-    [sg.Text('Mostrar a lista de alunos?'), sg.Button('MOSTRAR')],
-    [sg.Text('Escolher um aluno aleatorio?'), sg.Button( 'MOSTRAR')],
-    [sg.Text('Adicionar um aluno na lista?'), sg.InputText(key='adicionar'),sg.Button('MOSTRAR')],
-    [sg.Text('Remover o aluno da Lista?'), sg.InputText(key = 'remover'),sg.Button('MOSTRAR')],
+    [sg.Text('Mostrar a lista de alunos?'), sg.Button('1')],
+    [sg.Text('Escolher um aluno aleatorio?'), sg.Button( '2')],
+    [sg.Text('Adicionar um aluno na lista?'), sg.InputText(key='adicionar'),sg.Button('3')],
+    [sg.Text('Remover o aluno da Lista?'), sg.InputText(key = 'remover'),sg.Button('4')],
     [sg.Output(key = 'PRINTAR', size=(largura, altura))],
     [sg.Button('Sair')]
 ]
@@ -43,19 +43,19 @@ while True:
     if eventos == sg.WIN_CLOSED :
         break
     
-    if eventos == 'MOSTRAR':
+    if eventos == '1':
         with open('alunos.txt', 'r') as file:
                 txt = file.read()
                 formato  = list(map(str,txt.split('\n')))
         janela['PRINTAR'].update('\n'.join(formato))
                 
-    if eventos == 'MOSTRAR':
+    if eventos == '2':
         janela['PRINTAR'].update(choice(formato))
-    if eventos == 'MOSTRAR':
+    if eventos == '3':
         add_name = valores['adicionar']
         if add_name:
             add_aluno(formato, add_name , janela)
-    if eventos == 'MOSTRAR':
+    if eventos == '4':
         remove_name = valores['remover']
         if remove_name in formato:
             remove(formato,remove_name,janela)
