@@ -33,6 +33,12 @@ while True:
                 abrir = open('app/alunos.txt' , 'a') 
                 abrir.write('\n' + add_name)
                 saida['PRINTAR'].update('\n'.join(lista))
+            
+            def randon(lista):
+                with open('app/alunos.txt', 'r') as file:
+                    txt = file.read()
+                    formato  = list(map(str,txt.split('\n')))
+                janela['PRINTAR'].update(choice(formato))
 
 
 
@@ -67,13 +73,14 @@ while True:
                     break
                 
                 if eventos == '1':
-                    with open('alunos.txt', 'r') as file:
+                    with open('app/alunos.txt', 'r') as file:
                             txt = file.read()
                             formato  = list(map(str,txt.split('\n')))
                     janela['PRINTAR'].update('\n'.join(formato))
                             
                 if eventos == '2':
-                    janela['PRINTAR'].update(choice(formato))
+                    randon(janela)
+                            
                 if eventos == '3':
                     add_name = valores['adicionar']
                     if add_name:
