@@ -75,8 +75,8 @@ while True:
                 if eventos == '1':
                     with open('app/alunos.txt', 'r') as file:
                             txt = file.read()
-                            formato  = list(map(str,txt.split('\n')))
-                    janela['PRINTAR'].update('\n'.join(formato))
+                            lista  = list(map(str,txt.split('\n')))
+                    janela['PRINTAR'].update('\n'.join(lista))
                             
                 if eventos == '2':
                     randon(janela)
@@ -87,8 +87,8 @@ while True:
                         add_aluno(formato, add_name , janela)
                 if eventos == '4':
                     remove_name = valores['remover']
-                    if remove_name in formato:
-                        remove(formato,remove_name,janela)
+                    if remove_name in lista:
+                        remove(lista,remove_name,janela)
         else:
             print('mentor não encontrado')
     

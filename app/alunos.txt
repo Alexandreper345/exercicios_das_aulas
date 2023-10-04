@@ -6,4 +6,3 @@ jose
 margleison
 michael
 renan
-fernando
